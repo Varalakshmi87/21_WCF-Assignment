@@ -1,0 +1,41 @@
+﻿@model IEnumerable<_21_WCf_Client.Models.JobModel>
+
+@{
+    ViewBag.Title = "JobOpening";
+}
+
+<h2>JobOpening</h2>
+
+<p>
+    @Html.ActionLink("Back to Home", "Index")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.JobOpeningId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JobName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Role)
+        </th>
+      
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.JobOpeningId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JobName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Role)
+        </td>
+        
+    </tr>
+}
+
+</table>
